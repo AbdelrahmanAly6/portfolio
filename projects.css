@@ -1,0 +1,122 @@
+:root{
+    --pri-color:#EEEEEE;
+    --sec-color:#068FFF;
+    --text-color:#000000;
+    --button-hover:#4E4FEB;
+    --hover-color:#068FFF;
+    --main-transition: 0.4s ease;
+    --shadow-color:#0000004d;
+    --hover-shadow:#00000091;
+    --main-padding: 50px;
+}
+
+.active{
+    color: var(--sec-color);
+}
+.active::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    background-color: var(--hover-color);
+}
+
+.title{
+    margin-top: 5%;
+}
+
+.projects-section{
+    padding: var(--main-padding) 50px;
+    position: relative;
+    animation: projects 1s;
+}
+
+@keyframes projects{
+    from{
+    opacity: 0;
+    top: 50px;
+    }
+    to{
+    opacity: 1;
+    top: 0;
+    }
+    }
+
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+    gap: 40px;
+}
+
+.project{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--shadow-color);
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+}
+
+.project img{
+    max-width: 100%;
+    height: 330px;
+    transition: var(--main-transition);
+}
+
+.project img:hover{
+    transform: scale(1.1);
+}
+
+.project:hover .content{
+    transform: translate(0);
+}
+
+.content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--sec-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: var(--main-transition);
+}
+
+.project:hover .content{
+    transform: translate(0);
+}
+
+.content h3{
+    font-size: 3rem;
+
+}
+
+.content p{
+    font-size: 1.6rem;
+    margin: 0.3rem 0 1rem;
+}
+
+.content a{
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50px;
+    color: white;
+    font-size: 20px;
+}
+
+.content a:hover{
+    background-color: #00000000;
+}
+
+

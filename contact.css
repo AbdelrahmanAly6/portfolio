@@ -1,0 +1,84 @@
+:root {
+    --pri-color: #EEEEEE;
+    --sec-color: #068FFF;
+    --text-color: #000000;
+    --button-hover: #4E4FEB;
+    --hover-color: #068FFF;
+    --main-transition: 0.4s ease;
+    --shadow-color: #0000004d;
+    --hover-shadow: #00000091;
+    --main-padding: 50px;
+}
+
+.header {
+    top: 0;
+}
+
+.title {
+    margin-top: 5%;
+}
+
+.contact-section{
+    height: 100vh;
+    animation: contact 1s;
+}
+
+@keyframes contact{
+    from{
+    opacity: 0;
+    top: 50px;
+    }
+    to{
+    opacity: 1;
+    top: 0;
+    }
+    }
+
+.contact-section form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: -1%
+}
+
+.contact-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-form input,
+.contact-section form textarea {
+
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--pri-color);
+    background-color: #99999944;
+    border-radius: 0.8rem;
+    margin: 0.7rem 0;
+    resize: none;
+}
+
+.contact-form input{
+    width: 49%;
+}
+
+.send{
+    background-color: var(--sec-color);
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 30px;
+    /* margin-top: 2rem; */
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--main-transition);
+    box-shadow: 0px 3px 5px 0px var(--shadow-color);
+    width: 200px;
+    }
+        
+    .send:hover{
+        background-color: var(--button-hover);
+        box-shadow: 0px 3px 5px 0px var(--hover-shadow);
+    }
